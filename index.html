@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTrek: Social Science Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="accessibility-dialog" class="dialog-overlay" role="dialog" aria-labelledby="dialog-title" aria-modal="true">
+        <div class="dialog-content">
+            <h2 id="dialog-title" tabindex="0">Welcome! Let's customize your learning experience</h2>
+            <p tabindex="0">Please select your accessibility preferences:</p>
+            
+            <div class="accessibility-options">
+                <div class="option" role="group" aria-labelledby="text-size-label">
+                    <label id="text-size-label" tabindex="0">Text Size</label>
+                    <div class="buttons">
+                        <button class="text-size-btn" data-size="normal" aria-label="Normal text size">
+                            <span aria-hidden="true">A</span>
+                        </button>
+                        <button class="text-size-btn" data-size="large" aria-label="Large text size">
+                            <span aria-hidden="true">A+</span>
+                        </button>
+                        <button class="text-size-btn" data-size="larger" aria-label="Extra large text size">
+                            <span aria-hidden="true">A++</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="option" role="group" aria-labelledby="contrast-label">
+                    <label id="contrast-label" tabindex="0">Color Contrast</label>
+                    <div class="buttons">
+                        <button class="contrast-btn" data-contrast="normal" aria-label="Normal contrast">Normal</button>
+                        <button class="contrast-btn" data-contrast="high" aria-label="High contrast">High Contrast</button>
+                    </div>
+                </div>
+
+                <div class="option" role="group" aria-labelledby="reading-support-label">
+                    <label id="reading-support-label" tabindex="0">Reading Support</label>
+                    <div class="checkboxes">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="screen-reader" aria-label="Enable screen reader support">
+                            Screen Reader Support
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="dyslexic-font" aria-label="Enable dyslexia-friendly font">
+                            Dyslexia-Friendly Font
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button id="save-preferences" class="save-btn" aria-label="Save accessibility preferences">
+                Start Learning
+            </button>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="logo">TimeTrek</div>
+        <div class="nav-items">
+            <a href="#" class="active">Home</a>
+            <a href="#">Subjects</a>
+            <a href="#">Progress</a>
+            <a href="games.html">Game Modes</a>
+            <a href="#">Achievements</a>
+            <button class="accessibility-toggle">
+                <i class="fas fa-universal-access"></i>
+            </button>
+            <div class="auth-buttons">
+                <a href="login.html" class="auth-btn login">Login</a>
+                <a href="signup.html" class="auth-btn signup">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="progress-display">
+        <div class="progress-item" id="points-display" role="status">
+            <i class="fas fa-star"></i>
+            <span>Points: 0</span>
+        </div>
+        <div class="progress-item" id="level-display" role="status">
+            <i class="fas fa-layer-group"></i>
+            <span>Level 1</span>
+        </div>
+        <div class="progress-item" id="streak-display" role="status">
+            <i class="fas fa-fire"></i>
+            <span>0 day streak</span>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <h1>Past, Place and People</h1>
+            <p>Interactive Social Science Learning for Everyone</p>
+            <div class="subject-cards">
+                <div class="subject-card history">
+                    <i class="fas fa-landmark"></i>
+                    <h3>Indian Freedom Movement</h3>
+                    <p>Learn about India's journey to independence</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%"></div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn continue">
+                            <i class="fas fa-play"></i> Continue Learning
+                        </button>
+                        <button class="action-btn revise">
+                            <i class="fas fa-sync"></i> Revise
+                        </button>
+                        <button class="action-btn flashcards">
+                            <i class="fas fa-layer-group"></i> Flashcards
+                        </button>
+                    </div>
+                </div>
+
+                <div class="subject-card geography">
+                    <i class="fas fa-globe-americas"></i>
+                    <h3>Indian Geography</h3>
+                    <p>Explore India's diverse landscapes and regions</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 45%"></div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn continue">
+                            <i class="fas fa-play"></i> Continue Learning
+                        </button>
+                        <button class="action-btn revise">
+                            <i class="fas fa-sync"></i> Revise
+                        </button>
+                        <button class="action-btn flashcards">
+                            <i class="fas fa-layer-group"></i> Flashcards
+                        </button>
+                    </div>
+                </div>
+
+                <div class="subject-card civics">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Indian Constitution</h3>
+                    <p>Understand the foundation of Indian democracy</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 30%"></div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn continue">
+                            <i class="fas fa-play"></i> Continue Learning
+                        </button>
+                        <button class="action-btn revise">
+                            <i class="fas fa-sync"></i> Revise
+                        </button>
+                        <button class="action-btn flashcards">
+                            <i class="fas fa-layer-group"></i> Flashcards
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Learning Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card" onclick="window.location.href='ar-vr.html'">
+                    <i class="fas fa-vr-cardboard"></i>
+                    <h3>AR/VR Tours</h3>
+                    <p>Visit historical sites virtually</p>
+                </div>
+                <div class="feature-card" onclick="window.location.href='games.html'">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Game Modes</h3>
+                    <p>Learn through interactive challenges</p>
+                </div>
+                <div class="feature-card" onclick="window.location.href='audio-lessons.html'">
+                    <i class="fas fa-volume-up"></i>
+                    <h3>Audio Support</h3>
+                    <p>Listen to lessons and instructions</p>
+                </div>
+                <div class="feature-card" onclick="window.location.href='achievements.html'">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Achievements</h3>
+                    <p>Earn badges and track progress</p>
+                </div>
+            </div>
+        </section>
+
+       
+
+         
+
+        <section class="accessibility-features">
+            <h2>Accessibility Options</h2>
+            <div class="accessibility-controls">
+                <button class="text-size">
+                    <i class="fas fa-text-height"></i> Text Size
+                </button>
+                <button class="contrast">
+                    <i class="fas fa-adjust"></i> Contrast
+                </button>
+                <button class="screen-reader">
+                    <i class="fas fa-headphones"></i> Screen Reader
+                </button>
+                <button class="dyslexic-font">
+                    <i class="fas fa-font"></i> Dyslexic Font
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="accessibility.js"></script>
+    <script src="games/miniGame.js"></script>
+    <script src="games/gameLoader.js"></script>
+</body>
+</html>

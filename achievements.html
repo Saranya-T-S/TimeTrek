@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTrek: Achievements</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Same navigation -->
+    <nav class="main-nav">
+        <div class="logo">TimeTrek</div>
+        <div class="nav-items">
+            <a href="index.html">Home</a>
+            <a href="#">Subjects</a>
+            <a href="#">Progress</a>
+            <a href="games.html">Game Modes</a>
+            <a href="achievements.html">Achievements</a>
+            <button class="accessibility-toggle">
+                <i class="fas fa-universal-access"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <section class="achievements-section content-section">
+            <h1>Your Achievements</h1>
+            <p class="section-description">Track your learning progress and achievements</p>
+            
+            <div class="achievements-container">
+                <div class="streak-card">
+                    <i class="fas fa-fire streak-icon"></i>
+                    <h2>Current Streak</h2>
+                    <div class="streak-count">7 Days</div>
+                    <div class="streak-progress">
+                        <div class="streak-bar" style="width: 70%"></div>
+                    </div>
+                    <p>3 days until next badge!</p>
+                </div>
+
+                <div class="topics-progress">
+                    <h2>Topics Progress</h2>
+                    <div class="topic-card">
+                        <div class="topic-header">
+                            <h3>Indian Freedom Movement</h3>
+                            <span class="completion">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 100%"></div>
+                        </div>
+                        <i class="fas fa-check-circle complete-icon"></i>
+                    </div>
+
+                    <div class="topic-card">
+                        <div class="topic-header">
+                            <h3>Indian Geography</h3>
+                            <span class="completion">50%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 

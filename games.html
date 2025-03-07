@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTrek: Learning Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">TimeTrek</div>
+        <div class="nav-items">
+            <a href="index.html">Home</a>
+            <a href="#">Subjects</a>
+            <a href="#">Progress</a>
+            <a href="games.html" class="active">Game Modes</a>
+            <a href="#">Achievements</a>
+            <button class="accessibility-toggle">
+                <i class="fas fa-universal-access"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="progress-display">
+        <!-- Same progress display as index.html -->
+    </div>
+
+    <main>
+        <section class="games-section">
+            <h1>Learning Games</h1>
+            <p class="section-description">Choose from our interactive learning games to make your social science journey fun!</p>
+            
+            <div class="games-grid">
+                <div class="game-card" onclick="startGame('timeline', 'History')">
+                    <i class="fas fa-clock"></i>
+                    <h3>Timeline Challenge</h3>
+                    <p>Arrange historical events in chronological order</p>
+                    <button class="play-btn" aria-label="Play Timeline Challenge">
+                        Play Now <i class="fas fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="game-card" onclick="startGame('quiz', 'Civics')">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>Civics Quiz</h3>
+                    <p>Test your knowledge of government and citizenship</p>
+                    <button class="play-btn" aria-label="Play Civics Quiz">
+                        Play Now <i class="fas fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="game-card" onclick="startGame('matching', 'Geography')">
+                    <i class="fas fa-globe"></i>
+                    <h3>Geography Match</h3>
+                    <p>Match countries with their capitals and features</p>
+                    <button class="play-btn" aria-label="Play Geography Match">
+                        Play Now <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="game-container" class="game-container" aria-live="polite">
+                <!-- Games will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="accessibility.js"></script>
+    <script src="gamification.js"></script>
+    <script src="games/miniGame.js"></script>
+    <script src="games/gameLoader.js"></script>
+</body>
+</html> 
